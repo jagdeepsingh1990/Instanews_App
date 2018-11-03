@@ -5,7 +5,7 @@ var sectionDataArray = [];
 url +=
   "?" +
   $.param({
-    "api-key": "cec89a9c54f24354af812aedc5a43321"
+    'api-key': "cec89a9c54f24354af812aedc5a43321"
   });
   console.log(url)
 $.ajax({
@@ -37,17 +37,17 @@ $.ajax({
     //     value: 1,
     //     text: 'My option'
     // }));
-    $("#select_options").empty();
+    $('#select_options').empty();
     $.each(uni, function(key, value) {
-      $("#select_options").append(
-        $("<option/>", {
+      $('#select_options').append(
+        $('<option/>', {
           value: value,
           text: value
         })
       );
     });
-    $("#select_options").change(function() {
-        var val = $("#select_options option:selected").text().replace(" ", "");
+    $('#select_options').change(function() {
+        var val = $('#select_options option:selected').text().replace(" ", "");
         console.log(val);
         $.each( data, function( index, value ){
           if (val == value.section){
