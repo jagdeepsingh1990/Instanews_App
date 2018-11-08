@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="sass/style.scss" />
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="./build/css/style.css" />
+
 
 
     <title>InstaNews</title>
@@ -15,23 +15,30 @@
 
 <body>
 
-    <div class="containder">
+    <div class="container">
         <div class="logo_flex1">
-            <i
+            <!-- <iframe src="./images/nyt-logo.svg"> -->
+            <!-- Your browser does not support iframes -->
+            <!-- </iframe> -->
+            <img class="_logoImg" src="./images/nyt-logo.svg" alt="NewYorkTimes's logo">
         </div>
+
         <div class="select_option">
+            <label>Choose a section:</label>
             <div class="select">
                 <select id="select_options" class="list">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="vw">VW</option>
-                    <option value="audi" selected>Audi</option>
+                    <option>Sections...</option>
                 </select>
             </div>
-        </div>
-        <div class="footer">
+            <div class="newsData">
 
+            </div>
         </div>
+
+        <footer>
+            <p>&#169 Copyright 2018 InstaNews</p>
+        </footer>
+
     </div>
 
 
@@ -39,7 +46,9 @@
 
 
 
- 
+
+
+
 
 
 

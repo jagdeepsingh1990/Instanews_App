@@ -123,37 +123,97 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   src: url("../Fonts/OpenSans-Bold.eot");
   src: url("../Fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../Fonts/OpenSans-Bold.woff") format("woff"), url("../Fonts/OpenSans-Bold.ttf") format("truetype"), url("../Fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   src: url("../Fonts/OpenSans-Light.eot");
   src: url("../Fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../Fonts/OpenSans-Light.woff") format("woff"), url("../Fonts/OpenSans-Light.ttf") format("truetype"), url("../Fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   src: url("../Fonts/OpenSans-BoldItalic.eot");
   src: url("../Fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../Fonts/OpenSans-BoldItalic.woff") format("woff"), url("../Fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("../Fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   src: url("../Fonts/OpenSansLight-Italic.eot");
   src: url("../Fonts/OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("../Fonts/OpenSansLight-Italic.woff") format("woff"), url("../Fonts/OpenSansLight-Italic.ttf") format("truetype"), url("../Fonts/OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
   font-weight: 300;
   font-style: italic; }
 
-.containder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  height: 100%; }
+body {
+  background-color: black !important;
+  color: white; }
+  body div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 100%; }
+    body div.container div.logo_flex1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 350px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: self-end;
+          -ms-flex-align: self-end;
+              align-items: self-end; }
+    body div.container div.select_option {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      text-align: center;
+      padding-top: 20px; }
+      body div.container div.select_option div.select {
+        margin-top: 20px; }
+      body div.container div.select_option div.newsData div.newsDiv {
+        position: relative;
+        height: 300px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        body div.container div.select_option div.newsData div.newsDiv p {
+          color: white;
+          width: 100%; }
+        body div.container div.select_option div.newsData div.newsDiv a {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          text-decoration: none;
+          width: 100%; }
+    body div.container footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 10px;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      text-align: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
