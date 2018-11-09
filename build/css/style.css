@@ -161,23 +161,45 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-line-pack: center;
         align-content: center;
-    width: 100%; }
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
+    @media (min-width: 600px) {
+      body div.container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap; } }
     body div.container div.logo_flex1 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      height: 350px;
+      height: 50vh;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
       -webkit-box-align: self-end;
           -ms-flex-align: self-end;
               align-items: self-end; }
+      body div.container div.logo_flex1 img {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+      @media (min-width: 600px) {
+        body div.container div.logo_flex1 {
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: end;
+          height: 88vh;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
     body div.container div.select_option {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -187,33 +209,76 @@ body {
           -ms-flex-flow: column;
               flex-flow: column;
       text-align: center;
-      padding-top: 20px; }
+      padding-top: 20px;
+      height: 35vh; }
+      @media (min-width: 600px) {
+        body div.container div.select_option {
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+          padding-top: 0px;
+          height: 88vh;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; } }
       body div.container div.select_option div.select {
-        margin-top: 20px; }
-      body div.container div.select_option div.newsData div.newsDiv {
+        margin-top: 10px; }
+    body div.container div.newsData {
+      padding-top: 30px; }
+      body div.container div.newsData div.newsDiv {
         position: relative;
-        height: 300px;
+        height: 10px;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; }
-        body div.container div.select_option div.newsData div.newsDiv p {
-          color: white;
-          width: 100%; }
-        body div.container div.select_option div.newsData div.newsDiv a {
+        display: flex;
+        width: 100%;
+        height: 300px; }
+        @media (min-width: 600px) {
+          body div.container div.newsData div.newsDiv {
+            display: inline-block;
+            width: 33%; } }
+        @media (min-width: 1200px) {
+          body div.container div.newsData div.newsDiv {
+            width: 25%; } }
+        body div.container div.newsData div.newsDiv img {
+          width: 100%;
+          height: 300px; }
+        body div.container div.newsData div.newsDiv a {
           position: absolute;
-          bottom: 10px;
-          left: 0;
+          bottom: 0px;
           text-decoration: none;
-          width: 100%; }
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff; }
+          body div.container div.newsData div.newsDiv a p {
+            color: white;
+            width: 100%;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute; }
     body div.container footer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin-bottom: 10px;
       -webkit-box-align: end;
           -ms-flex-align: end;
               align-items: flex-end;
       text-align: center;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      height: 40px;
+      line-height: 40px;
+      width: 100%;
+      color: #c2c2c2; }
+      body div.container footer span {
+        text-transform: uppercase; }
+      @media (min-width: 600px) {
+        body div.container footer {
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
