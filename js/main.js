@@ -1,9 +1,10 @@
 var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
 
-var newsDiv = $(".newsData");
+let newsDiv = $(".newsData");
+let selectOptionList = $("#select_options")
 
 //on select option
-$("#select_options").change(function() {
+selectOptionList.change(function() {
   var option_text = $("#select_options option:selected")
     .val()
     .replace(" ", "");
@@ -15,13 +16,8 @@ $("#select_options").change(function() {
   })
     .done(function(result) {
       var data = result.results;
-      $(".select_option").css({"height": "auto"});
-      if ($( window ).width() > 600) {
-      $(".header").css({
-        "height": "14vh",
-      })
-    }
-    newsDiv.empty()
+
+      newsDiv.empty();
       addNewsToDiv(data);
     })
     .fail(function(err) {
@@ -38,12 +34,61 @@ function addApi_key(urlText) {
     });
   return urlText;
 }
+
+let logoDiv = $(".logo_flex1")
+let selectOptionClass = $(".select_option")
+let logoImage = $("._logoImg")
+let newsContainer = $(".newsData")
+selectOptionList.change(function() {
+ 
+  if ($(window).width() >= 600 && $(window).width() <= 1200) {
+    
+    logoDiv.css({
+      height: "14vh",
+      "flex-basis": "40%"
+    });
+    selectOptionClass.css({
+      height: "14vh",
+      "flex-basis": "57%"
+    });
+    logoImage.css({
+      height: "10vh",
+      position: "absolute",
+
+      "margin-right": "6%"
+    });
+    newsContainer.css({
+      "padding-top": "0px"
+    });
+  } else if ($(window).width() > 1200) {
+    
+    logoDiv.css({
+      height: "16vh",
+      
+      "flex-basis": "16%",
+      "justify-content": "start"
+    });
+    
+    logoImage.css({
+      height: "10vh",
+      "margin-left":"30px"
+    });
+    selectOptionClass.css({
+      height: "16vh",
+      "flex-basis": "83%"
+    });
+    newsContainer.css({
+      "padding-top": "0px"
+    });
+  } else {
+    return
+  }
+  $(".select_option").css({ height: "auto" });
+});
 // Add data to news Conatiner
 
 function addNewsToDiv(dataArr) {
-
   $.each(dataArr, function(index, value) {
-    
     var abstract = value.abstract;
     var newsUrl = value.url;
     if (value.multimedia.length !== 0) {
