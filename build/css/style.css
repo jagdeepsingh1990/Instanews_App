@@ -257,7 +257,7 @@ body {
         height: 300px; }
         @media (min-width: 1200px) {
           body div.container div.newsData div.newsDiv:hover a {
-            visibility: visible;
+            height: auto;
             opacity: 1; } }
         @media (min-width: 600px) {
           body div.container div.newsData div.newsDiv {
@@ -280,10 +280,10 @@ body {
           background: rgba(0, 0, 0, 0.5); }
           @media (min-width: 1200px) {
             body div.container div.newsData div.newsDiv a {
-              visibility: hidden;
+              height: 0px;
               opacity: 0;
-              -webkit-transition: opacity 0.7s, visibility 0.8s;
-              transition: opacity 0.7s, visibility 0.8s; } }
+              -webkit-transition: opacity 1.7s, height 1.8s;
+              transition: opacity 1.7s, height 1.8s; } }
           body div.container div.newsData div.newsDiv a p {
             width: 100%;
             bottom: 0;

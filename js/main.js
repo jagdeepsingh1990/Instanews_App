@@ -1,3 +1,10 @@
+
+$(document).ready(function() {
+  $('#select_options').select2();
+});
+
+
+
 var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
 
 let newsDiv = $(".newsData");
@@ -18,7 +25,10 @@ selectOptionList.change(function() {
       var data = result.results;
 
       newsDiv.empty();
-      addNewsToDiv(data);
+      if (data.length !== 0) {
+        addNewsToDiv(data);
+      }
+      
     })
     .fail(function(err) {
       throw err;
@@ -91,7 +101,7 @@ function addNewsToDiv(dataArr) {
   $.each(dataArr, function(index, value) {
     var abstract = value.abstract;
     var newsUrl = value.url;
-    if (value.multimedia.length !== 0) {
+    if (abstract !== "" && newsUrl !== "" && value.multimedia.length !== 0) {
       var imgurl = value.multimedia[4].url;
 
       newsDiv.append(

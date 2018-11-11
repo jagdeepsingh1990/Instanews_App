@@ -93,8 +93,9 @@ body {
             @include desktop {
             &:hover {
               a {
-                visibility: visible;
+                height: auto;
                 opacity: 1;
+               
               }
             }
           }
@@ -117,9 +118,10 @@ body {
               display: flex;
               background: rgba(0, 0, 0, 0.5);
               @include desktop {
-                visibility: hidden;
+                height: 0px;
                 opacity: 0;
-                transition: opacity 0.7s, visibility 0.8s;
+                
+                transition: opacity 1.7s, height 1.8s;
               }
 
               p {
