@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
-  $('#select_options').select2();
+  $('#select_options').select2({
+    
+  });
 });
 
 
@@ -49,8 +51,11 @@ let logoDiv = $(".logo_flex1")
 let selectOptionClass = $(".select_option")
 let logoImage = $("._logoImg")
 let newsContainer = $(".newsData")
+
+
+// ------------------------------manage css------------------
 selectOptionList.change(function() {
- 
+  $("#select_options option[value='none']").remove();
   if ($(window).width() >= 600 && $(window).width() <= 1200) {
     
     logoDiv.css({
@@ -91,13 +96,20 @@ selectOptionList.change(function() {
       "padding-top": "0px"
     });
   } else {
-    return
+    logoDiv.css({
+      height: "40vh"
+    })
+    selectOptionClass.css({
+      height: "12vh",
+      
+    });
   }
   $(".select_option").css({ height: "auto" });
 });
 // Add data to news Conatiner
 
 function addNewsToDiv(dataArr) {
+
   $.each(dataArr, function(index, value) {
     var abstract = value.abstract;
     var newsUrl = value.url;

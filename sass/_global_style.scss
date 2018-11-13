@@ -126,7 +126,7 @@ body {
 
               p {
                 width: 100%;
-                bottom: 0;
+                bottom: 0px;
                 background: rgba(0, 0, 0, 0.7);
                 position: absolute;
               }
@@ -140,8 +140,8 @@ body {
         align-items: flex-end;
         text-align: center;
         justify-content: center;
-        height: 40px;
-        line-height: 40px;
+        height: 50px;
+        line-height: 50px;
         width: 100%;
         color: #c2c2c2;
         transition: all 1s;
@@ -162,3 +162,4 @@ body {
     }
   }
 }
+.select2-results { background-color: lightblue; }
