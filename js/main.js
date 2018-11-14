@@ -54,7 +54,7 @@ let selectOptionClass = $('.select_option');
 let logoImage = $('._logoImg');
 let newsContainer = $('.newsData');
 
-// ------------------------------manage css------------------
+// ------------------------------On_click_manage css------------------
 selectOptionList.change(function() {
   $('#select_options option[value="none"]').remove();
   if ($(window).width() >= 600 && $(window).width() <= 1200) {
@@ -101,6 +101,10 @@ selectOptionList.change(function() {
     selectOptionClass.css({
       'height': '12vh'
     });
+    newsContainer.css({
+      'padding-top': '0px',
+      'margin-top': '-30px'
+    })
   }
   $('.select_option').css({ height: 'auto' });
 });
