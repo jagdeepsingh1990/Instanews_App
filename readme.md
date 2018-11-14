@@ -2,7 +2,7 @@
 
 #### Instruction:
 
-Use any internet browser to open index.html  
+Use any internet browser to open index.html
 
 # Description:
 
@@ -31,24 +31,25 @@ The following technologies were implemented to developing the one page responsiv
 1. Applying Sass syntax with media queries
 1. Creating elements dynamically and applying CSS using jQuery
 1. Making api request and fetch data
-1.   
-
+1.
 
 # Screenshots of Responsive Instanews
-   Message Input
+
+Message Input
 
 This is News Portal Website. I used HTML, CSS and Javascript, jQuery, ajax, APIs, Gulp and SASS/SCSS.
 
 This webpage is fully compatable across all browsers and devices.
 
-# Desktop
-
-
-<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://user-images.githubusercontent.com/39428497/48451284-9b1b4d80-e75e-11e8-8872-78e62899de81.png" width="600" height="500" />
-# Tablet
-![instanews-tablet-photos](https://user-images.githubusercontent.com/39428497/48451370-036a2f00-e75f-11e8-8549-08f96b8037b4.png)
-
-
 # Mobile
 
-![instanews-mobile-photos](https://user-images.githubusercontent.com/39428497/48451337-e03f7f80-e75e-11e8-9d35-118e12b69511.png)
+![initial_mobile](https://user-images.githubusercontent.com/39428497/48454233-5e098800-e76b-11e8-80a4-5b0ed63496d1.png)
+
+![mobile](https://user-images.githubusercontent.com/39428497/48454265-7679a280-e76b-11e8-8383-4802b2e21376.png)
+
+# Tablet
+
+
+![tablet](https://user-images.githubusercontent.com/39428497/48454285-8e512680-e76b-11e8-9d96-890334ebd2c0.png)
+# Desktop
+![desktop](https://user-images.githubusercontent.com/39428497/48454305-9c06ac00-e76b-11e8-9d74-3ef1cf30b1d5.png)

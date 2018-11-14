@@ -338,4 +338,5 @@ body {
   body .select2-results {
     background-color: lightblue; }
   body .select2-container--default .select2-selection--single {
-    height: 25px; }
+    height: 25px;
+    outline: none; }
