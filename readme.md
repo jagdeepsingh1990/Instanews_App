@@ -43,13 +43,12 @@ This webpage is fully compatable across all browsers and devices.
 
 # Desktop
 
-![instanews-desktop-photos](https://user-images.githubusercontent.com/39428497/48451284-9b1b4d80-e75e-11e8-8872-78e62899de81.png = 600x600)
 
-
+<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://user-images.githubusercontent.com/39428497/48451284-9b1b4d80-e75e-11e8-8872-78e62899de81.png" width="600" height="500" />
 # Tablet
-![instanews-tablet-photos](https://user-images.githubusercontent.com/39428497/48451370-036a2f00-e75f-11e8-8549-08f96b8037b4.png = 600x600)
+![instanews-tablet-photos](https://user-images.githubusercontent.com/39428497/48451370-036a2f00-e75f-11e8-8549-08f96b8037b4.png)
 
 
 # Mobile
 
-![instanews-mobile-photos](https://user-images.githubusercontent.com/39428497/48451337-e03f7f80-e75e-11e8-9d35-118e12b69511.png = 600x1000)
+![instanews-mobile-photos](https://user-images.githubusercontent.com/39428497/48451337-e03f7f80-e75e-11e8-9d35-118e12b69511.png)
