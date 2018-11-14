@@ -1,120 +1,117 @@
-
+// -------------------------------DropDown Menu----------------
 $(document).ready(function() {
-  $('#select_options').select2({
-    
-  });
+  $('#select_options').select2();
 });
 
 
 
-var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
-
-let newsDiv = $(".newsData");
-let selectOptionList = $("#select_options")
-
-//on select option
+let newsDiv = $('.newsData');
+let selectOptionList = $('#select_options');
+var loader = $('.pageloader');
+loader.hide();
+// ---------------------------------on select options
 selectOptionList.change(function() {
-  var option_text = $("#select_options option:selected")
+  loader.show();
+  var option_text = $('#select_options option:selected')
     .val()
-    .replace(" ", "");
-  url = "https://api.nytimes.com/svc/topstories/v2/" + option_text + ".json";
+    .replace(' ', '');
+  let url = urlUpdateByValue(option_text)
 
   $.ajax({
     url: addApi_key(url),
-    method: "GET"
+    method: 'GET'
   })
     .done(function(result) {
+      loader.hide();
       var data = result.results;
 
       newsDiv.empty();
       if (data.length !== 0) {
         addNewsToDiv(data);
       }
-      
     })
     .fail(function(err) {
       throw err;
     });
 });
+// ------------------------------------add apiKey to Url
+function urlUpdateByValue(value) {
+  return ('https://api.nytimes.com/svc/topstories/v2/' + value + '.json')
+}
 
-// add apiKey to Url
+// ------------------------------------add apiKey to Url
 function addApi_key(urlText) {
   urlText +=
-    "?" +
+    '?' +
     $.param({
-      "api-key": "cec89a9c54f24354af812aedc5a43321"
+      'api-key': 'cec89a9c54f24354af812aedc5a43321'
     });
   return urlText;
 }
 
-let logoDiv = $(".logo_flex1")
-let selectOptionClass = $(".select_option")
-let logoImage = $("._logoImg")
-let newsContainer = $(".newsData")
-
+let logoDiv = $('.logo_flex1');
+let selectOptionClass = $('.select_option');
+let logoImage = $('._logoImg');
+let newsContainer = $('.newsData');
 
 // ------------------------------manage css------------------
 selectOptionList.change(function() {
-  $("#select_options option[value='none']").remove();
+  $('#select_options option[value="none"]').remove();
   if ($(window).width() >= 600 && $(window).width() <= 1200) {
-    
     logoDiv.css({
-      height: "14vh",
-      "flex-basis": "40%"
+      'height': '16vh',
+      'flex-basis': '40%'
     });
     selectOptionClass.css({
-      height: "14vh",
-      "flex-basis": "57%"
+      'height': '16vh',
+      'flex-basis': '57%'
     });
     logoImage.css({
-      height: "10vh",
-      position: "absolute",
+      'height': '10vh',
+      'position': 'absolute',
 
-      "margin-right": "6%"
+      'margin-right': '6%'
     });
     newsContainer.css({
-      "padding-top": "0px"
+      'padding-top': '0px'
     });
   } else if ($(window).width() > 1200) {
-    
     logoDiv.css({
-      height: "16vh",
-      
-      "flex-basis": "16%",
-      "justify-content": "start"
+      'height': '16vh',
+
+      'flex-basis': '16%',
+      'justify-content': 'start'
     });
-    
+
     logoImage.css({
-      height: "10vh",
-      "margin-left":"30px"
+      'height': '10vh',
+      'margin-left': '30px'
     });
     selectOptionClass.css({
-      height: "16vh",
-      "flex-basis": "83%"
+      'height': '16vh',
+      'flex-basis': '83%'
     });
     newsContainer.css({
-      "padding-top": "0px"
+      'padding-top': '0px'
     });
   } else {
     logoDiv.css({
-      height: "40vh"
-    })
+      'height': '40vh'
+    });
     selectOptionClass.css({
-      height: "12vh",
-      
+      'height': '12vh'
     });
   }
-  $(".select_option").css({ height: "auto" });
+  $('.select_option').css({ height: 'auto' });
 });
-// Add data to news Conatiner
+// // ------------------------------------Add data to news Conatiner
 
 function addNewsToDiv(dataArr) {
-
   $.each(dataArr, function(index, value) {
-    var abstract = value.abstract;
-    var newsUrl = value.url;
-    if (abstract !== "" && newsUrl !== "" && value.multimedia.length !== 0) {
-      var imgurl = value.multimedia[4].url;
+    let abstract = value.abstract;
+    let newsUrl = value.url;
+    if (abstract !== '' && newsUrl !== '' && value.multimedia.length !== 0) {
+      let imgurl = value.multimedia[4].url;
 
       newsDiv.append(
         '<div class= "newsDiv"><img src = "' +
@@ -130,14 +127,3 @@ function addNewsToDiv(dataArr) {
     }
   });
 }
-
-//Remove duplicate value from Array
-// function removeDups(names) {
-//   var unique = {};
-//   names.forEach(function(i) {
-//     if (!unique[i]) {
-//       unique[i] = true;
-//     }
-//   });
-//   return Object.keys(unique);
-// }
